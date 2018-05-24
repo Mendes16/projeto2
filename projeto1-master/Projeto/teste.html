@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        #map {height: 800px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+<div id="map"></div>
+<script>
+    function initMap() {
+        var joinville = {lat: -26.3051, lng: -48.8461};
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 12,
+            center: joinville
+        });
+        var marker = new google.maps.Marker({
+            position: joinville,
+            map: map
+        });
+    }
+</script>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyApcZFMj56_rOAfTJJKaDqLBQ8G0drY56c&callback=initMap">
+</script>
+</body>
+</html>
